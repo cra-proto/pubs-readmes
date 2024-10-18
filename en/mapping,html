@@ -1,0 +1,38 @@
+  <div class="row">
+      <div class="col-md-8"> 
+        <!--URL mapping & FF-->
+        <div data-wb-urlmapping='{
+		"account=mya": [{ "action": "selectInput", "source": "#accountOptions", "value": "My Account for individuals" },{ "action": "removeClass", "source": ".mya", "class": "hidden" },{ "action": "addClass", "source": ".all,.all-mba,.all-rac", "class": "hidden" }],
+		"account=mba": [{ "action": "selectInput", "source": "#accountOptions", "value": "My Business Account" },{ "action": "removeClass", "source": ".mba", "class": "hidden" },{ "action": "addClass", "source": ".all,.all-mya,.all-rac", "class": "hidden" }],
+		"account=rac": [{ "action": "selectInput", "source": "#accountOptions", "value": "Represent a Client" },{ "action": "removeClass", "source": ".rac", "class": "hidden" },{ "action": "addClass", "source": ".all,.all-mya,.all-mba", "class": "hidden" }]
+	}'></div>
+        <div class="wb-frmvld gc-font-2019">
+          <form id="accountOptions">
+            <div class="wb-fieldflow" data-wb-fieldflow='{"renderas":"radio", "gcChckbxrdio":true, "noForm": true, "isoptional": true, "reset": {"action": "addClass", "source": ".mya,.mba,.rac,.all,.all-mya,.all-mba,.all-rac", "class": "hidden", "live": true}, "itmselector": "#options"}'>
+              <div class="wb-fieldflow-header">
+                <div class="wb-fieldflow-label">I want to register for: </div>
+              </div>
+              <div id="options">
+                <ul>
+                  <li data-wb-fieldflow='{"action": "removeClass", "source": ".mya,.all-mya", "class": "hidden", "live": true}'>My Account for individuals</li>
+                  <li data-wb-fieldflow='{"action": "removeClass", "source": ".mba,.all-mba", "class": "hidden", "live": true}'>My Business Account</li>
+                  <li data-wb-fieldflow='{"action": "removeClass", "source": ".rac,.all-rac", "class": "hidden", "live": true}'>Represent a Client</li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--h2>Visible classes (for testing)</h2>
+        <p><span class="mya hidden">.mya - hidden by default</span></p>
+        <p><span class="mba hidden">.mba - hidden by default</span></p>
+        <p><span class="rac hidden">.rac - hidden by default</span></p>
+        <p><span class="all">.all - shown by default</span></p>
+        <p><span class="all-mya">.all-mya - shown by default</span></p>
+        <p><span class="all-mba">.all-mba - shown by default</span></p>
+        <p><span class="all-rac">.all-rac - shown by default</span></p>
+        <br-->
+        <!--End of URL mapping & FF-->
+        
+        <p id="register" class="mrgn-tp-md lead" tabindex="0">Follow the steps below to register<span class="all"></span><span class="mya hidden"> for <strong>My Account for individuals</strong></span><span class="mba hidden"> for <strong>My Business Account</strong></span><span class="rac hidden"> for <strong>Represent a Client</strong> and to receive the RepID that you will share with your clients, family or friends so they can authorize you as their representative</span>.</p>
+      </div>
+    </div>
