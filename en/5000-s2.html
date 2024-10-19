@@ -130,8 +130,7 @@
                                     download="5000-s2-fill-23e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF
                                     (5000-s2-fill-23e.pdf)</a></li>
 
-                            <p>Value is here: <span id="selected-year1"></span> - <span id="selected-year2"></span></p>
-
+                                    <p>Value is here: <span id="selected-year"></span> </p>
                             <script>
                                 // Extract 'year' from the URL parameters
                                 const urlParams = new URLSearchParams(window.location.search);
@@ -139,12 +138,12 @@
 
                                 // Insert 'year' into your HTML
                                 if (qval) {
-                                    
+
                                     // Get the last two digits of the year
                                     lastTwoDigits = qval.slice(-2);
 
                                     // Create the URL with the last 2 digits 
-                                    document.getElementById('selected-year1').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-' + lastTwoDigits + 'e.pdf">Download PDF</a>';
+                                    document.getElementById('selected-year').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-' + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'  + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-' +  lastTwoDigits + 'e.pdf)</a>';
                                 }
                             </script>
 
