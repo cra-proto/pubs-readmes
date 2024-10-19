@@ -86,6 +86,43 @@
         });
     </script>
 
+<script>
+    // Extract 'year' from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const year = urlParams.get('year');
+
+    // Insert 'year' into your HTML
+    if (year) {
+
+        // Get the last two digits of the year
+        const lastTwoDigits = year.slice(-2);
+
+        // Create the fillable PDF link with the last 2 digits 
+        document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf)</a>';
+
+        // Create the standart PDF link with the last 2 digits 
+        document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
+            + lastTwoDigits + 'e.pdf" download="5000-s2-'
+            + lastTwoDigits + 'e.pdf">Standard PDF (5000-s2-'
+            + lastTwoDigits + 'e.pdf)</a>';
+
+        // Create the large print PDF link with the last 2 digits 
+        document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp'
+            + lastTwoDigits + 'e.pdf" download="5000-s2-lp'
+            + lastTwoDigits + 'e.pdf">Large print PDF (5000-s2-lp'
+            + lastTwoDigits + 'e.pdf)</a>';
+
+        // Create the e-text link with the last 2 digits 
+        document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
+            + lastTwoDigits + 'e.txt" download="5000-s2-'
+            + lastTwoDigits + 'e.txt">E-text (5000-s2-'
+            + lastTwoDigits + 'e.txt)</a>';
+    }
+</script>
+
     <!-- Write closure template -->
     <div class="container">
         <div class="row">
@@ -126,26 +163,6 @@
                             10 or higher.</p>
                         <ul>
                             <li>Selected year: <span id="fillable-pdf"></span></li>
-
-                            <script>
-                                // Extract 'year' from the URL parameters
-                                const urlParams = new URLSearchParams(window.location.search);
-                                const year = urlParams.get('year');
-
-                                // Insert 'year' into your HTML
-                                if (year) {
-
-                                    // Get the last two digits of the year
-                                    const lastTwoDigits = year.slice(-2);
-
-                                    // Create the fillable PDF link with the last 2 digits 
-                                    document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
-                                        + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
-                                        + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-'
-                                        + lastTwoDigits + 'e.pdf)</a>';
-                                }
-                            </script>
-
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
                                     <summary>All years: <span class="wb-inv">Accessible</span> Fillable PDFs
@@ -187,12 +204,10 @@
                     <li><span class="fas fa-pencil-alt text-muted fa-lg fa-li"></span>
                         <h3>Print and fill out by hand</h3>
                         <ul>
-                            <li>Current year: <a
-                                    href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.pdf">Standard
-                                    print PDF (5000-s2-23e.pdf)</a></li>
+                            <li>Selected year: <span id="standart-pdf"></span></li>
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
-                                    <summary>Previous years: Standard print PDFs</summary>
+                                    <summary>All years: Standard print PDFs</summary>
                                     <p>This form is also available for the years listed below:</p>
                                     <ul class="lst-none">
                                         <!--From readme XML file-->
@@ -221,12 +236,10 @@
                                     </ul>
                                 </details>
                             </li>
-                            <li>Current year: <a
-                                    href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-23e.pdf">Large
-                                    print PDF (5000-s2-lp-23e.pdf)</a></li>
+                            <li>Selected year: <span id="large-pdf"></span></li>
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
-                                    <summary>Previous years: Large print PDFs</summary>
+                                    <summary>All years: Large print PDFs</summary>
                                     <p>This form is also available for the years listed below:</p>
                                     <ul class="lst-none">
                                         <!--From readme XML file-->
@@ -260,12 +273,10 @@
                         <h3>Download and listen</h3>
                         <p>Use your preferred screen reader to listen to the e-text file.</p>
                         <ul>
-                            <li>Current year: <a
-                                    href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.txt">E-text
-                                    (5000-s2-23e.txt)</a></li>
+                            <li>Selected year: <span id="e-text"></span></li>
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
-                                    <summary>Previous years: E-text</summary>
+                                    <summary>All years: E-text</summary>
                                     <p>This form is also available for the years listed below:</p>
                                     <ul>
                                         <!--From readme XML file-->
