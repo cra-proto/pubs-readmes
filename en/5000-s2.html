@@ -125,35 +125,37 @@
                                         class="far fa-question-circle mrgn-lft-sm"></span></span></a> in Acrobat Reader
                             10 or higher.</p>
                         <ul>
-                            <li>Current year: <a
-                                    href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf"
-                                    download="5000-s2-fill-23e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF
-                                    (5000-s2-fill-23e.pdf)</a></li>
+                            <li>Selected year: <span id="fillable-pdf"></span></li>
 
-                                    <p>Value is here: <span id="selected-year"></span> </p>
                             <script>
                                 // Extract 'year' from the URL parameters
                                 const urlParams = new URLSearchParams(window.location.search);
-                                const qval = urlParams.get('year');
+                                const year = urlParams.get('year');
 
                                 // Insert 'year' into your HTML
-                                if (qval) {
+                                if (year) {
 
                                     // Get the last two digits of the year
-                                    lastTwoDigits = qval.slice(-2);
+                                    const lastTwoDigits = year.slice(-2);
 
-                                    // Create the URL with the last 2 digits 
-                                    document.getElementById('selected-year').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-' + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'  + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-' +  lastTwoDigits + 'e.pdf)</a>';
+                                    // Create the fillable PDF link with the last 2 digits 
+                                    document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
+                                        + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
+                                        + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-'
+                                        + lastTwoDigits + 'e.pdf)</a>';
                                 }
                             </script>
 
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
-                                    <summary>Previous years: <span class="wb-inv">Accessible</span> Fillable PDFs
+                                    <summary>All years: <span class="wb-inv">Accessible</span> Fillable PDFs
                                     </summary>
                                     <p>This form is also available for the years listed below:</p>
                                     <ul>
                                         <!--From readme XML file-->
+                                        <li><a
+                                                href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf">2023
+                                                - Fillable PDF (5000-s2-fill-23e.pdf)</a></li>
                                         <li><a
                                                 href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-22e.pdf">2022
                                                 - Fillable PDF (5000-s2-fill-22e.pdf)</a></li>
