@@ -13,7 +13,7 @@
 
 <!-- WET-BOEW Dynamic Content with Year -->
 <section>
-    <h1>Report for the Year - test 2: <span id="year-display">Loading...</span></h1>
+    <h1>Report for the Year: <span id="year-display">Loading...</span></h1>
     <p>This report summarizes the events of <span id="year-inline">Loading...</span>.</p>
 </section>
 
@@ -30,12 +30,12 @@
     // Function to inject the year into WET-BOEW content
     function insertYearInHTML(year) {
         if (year) {
+            console.log("Injecting year:", year);  // Debugging log
             // Inject the year into the HTML
             document.getElementById('year-display').textContent = year;
             document.getElementById('year-inline').textContent = year;
-            console.log("Year injected into HTML:", year);  // Debugging log
         } else {
-            console.log("Year parameter not found in URL.");  // Debugging log
+            console.error("No year parameter found in the URL.");  // Debugging log
         }
     }
 
@@ -46,4 +46,20 @@
             document.addEventListener("wb-ready.wb", function() {
                 console.log("WET-BOEW is ready.");  // Debugging log
                 const year = getYearFromURL();
-                insertYearInHTML(year
+                if (year) {
+                    insertYearInHTML(year);
+                } else {
+                    console.log("Year not found in URL.");
+                }
+            });
+        } else {
+            console.error("jQuery is not loaded");
+        }
+    });
+</script>
+
+<!-- WET-BOEW footer scripts -->
+<script src="https://cdn.canada.ca/wet-boew/5.x/js/theme.min.js"></script>
+
+</body>
+</html>
