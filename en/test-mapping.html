@@ -13,7 +13,7 @@
 
 <!-- WET-BOEW Dynamic Content with Year -->
 <section>
-    <h1>Report for the Year - test: <span id="year-display">Loading...</span></h1>
+    <h1>Report for the Year: <span id="year-display">Loading...</span></h1>
     <p>This report summarizes the events of <span id="year-inline">Loading...</span>.</p>
 </section>
 
@@ -39,11 +39,13 @@
         }
     }
 
-    // Wait for WET-BOEW to be ready before running the script
-    $(document).on("wb-ready.wb", function() {
-        console.log("WET-BOEW is ready.");  // Debugging log
-        const year = getYearFromURL();
-        insertYearInHTML(year);
+    // Ensure WET-BOEW and jQuery are ready before running the script
+    document.addEventListener("DOMContentLoaded", function() {
+        $(document).on("wb-ready.wb", function() {
+            console.log("WET-BOEW is ready.");  // Debugging log
+            const year = getYearFromURL();
+            insertYearInHTML(year);
+        });
     });
 </script>
 
