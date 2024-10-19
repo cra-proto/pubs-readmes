@@ -22,7 +22,9 @@
     // Function to get the 'year' parameter from the URL
     function getYearFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get('year');
+        const year = urlParams.get('year');
+        console.log("Extracted year from URL:", year);  // Debugging log
+        return year;
     }
 
     // Function to inject the year into WET-BOEW content
@@ -31,13 +33,15 @@
             // Inject the year into the HTML
             document.getElementById('year-display').textContent = year;
             document.getElementById('year-inline').textContent = year;
+            console.log("Year injected into HTML:", year);  // Debugging log
         } else {
-            console.log("Year parameter not found in URL.");
+            console.log("Year parameter not found in URL.");  // Debugging log
         }
     }
 
     // Wait for WET-BOEW to be ready before running the script
     $(document).on("wb-ready.wb", function() {
+        console.log("WET-BOEW is ready.");  // Debugging log
         const year = getYearFromURL();
         insertYearInHTML(year);
     });
