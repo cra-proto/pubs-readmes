@@ -161,6 +161,21 @@
         <!--End of URL mapping & FF-->
         
         <p id="register" class="mrgn-tp-md lead" tabindex="0">Follow the steps below to register<span class="all"></span><span class="mya hidden"> for <strong>My Account for individuals</strong></span><span class="mba hidden"> for <strong>My Business Account</strong></span><span class="rac hidden"> for <strong>Represent a Client</strong> and to receive the RepID that you will share with your clients, family or friends so they can authorize you as their representative</span>.</p>
+
+        <p>Value is here: </p> <span id="dynamic-content"></span></div>p>
+
+        <script>
+            // Extract 'qval' from the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const qval = urlParams.get('qval');
+        
+            // Insert qval into your HTML
+            if (qval) {
+                document.getElementById('dynamic-content').textContent = qval;
+            }
+        </script>
+        
+
       </div>
     </div>
     <ol class="lst-stps ld-zr">
