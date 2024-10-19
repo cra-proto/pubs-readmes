@@ -167,7 +167,7 @@
                     <li><span class="fas fa-pencil-alt text-muted fa-lg fa-li"></span>
                         <h3>Print and fill out by hand</h3>
                         <ul>
-                            <li>Selected year: <span id="standart-pdf"></span></li>
+                            <li>Selected year: <span id="standard-pdf"></span></li>
                             <li class="lst-none">
                                 <details class="max-content mrgn-tp-md mrgn-lft-md">
                                     <summary>All years: Standard print PDFs</summary>
@@ -319,43 +319,40 @@
         </div>
     </div>
 
-    <!-- Populate the selected year links-->
-    <script>
-        // Extract 'year' from the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const year = urlParams.get('year');
+<!-- Populate the selected year links-->
+<script>
+    // Extract 'year' from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const year = urlParams.get('year');
 
-        // Insert 'year' into your HTML
-        if (year) {
+    // Insert 'year' into your HTML
+    if (year) {
 
-            // Get the last two digits of the year
-            const lastTwoDigits = year.slice(-2);
+        // Get the last two digits of the year
+        const lastTwoDigits = year.slice(-2);
 
-            // Create the fillable PDF link with the last 2 digits 
-            document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
-                + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
-                + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-'
-                + lastTwoDigits + 'e.pdf)</a>';
+        // Create the fillable PDF link with the last 2 digits 
+        document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf"><span class="wb-inv"> Accessible</span> Fillable PDF (5000-s2-fill-'
+            + lastTwoDigits + 'e.pdf)</a>';
 
-            // Create the standart PDF link with the last 2 digits 
-            document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
-                + lastTwoDigits + 'e.pdf" download="5000-s2-'
-                + lastTwoDigits + 'e.pdf">Standard PDF (5000-s2-'
-                + lastTwoDigits + 'e.pdf)</a>';
+        // Create the standart PDF link with the last 2 digits 
+        document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
+            + lastTwoDigits + 'e.pdf">Standard PDF (5000-s2-'
+            + lastTwoDigits + 'e.pdf)</a>';
 
-            // Create the large print PDF link with the last 2 digits 
-            document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp'
-                + lastTwoDigits + 'e.pdf" download="5000-s2-lp'
-                + lastTwoDigits + 'e.pdf">Large print PDF (5000-s2-lp'
-                + lastTwoDigits + 'e.pdf)</a>';
+        // Create the large print PDF link with the last 2 digits 
+        document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp'
+            + lastTwoDigits + 'e.pdf">Large print PDF (5000-s2-lp'
+            + lastTwoDigits + 'e.pdf)</a>';
 
-            // Create the e-text link with the last 2 digits 
-            document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
-                + lastTwoDigits + 'e.txt" download="5000-s2-'
-                + lastTwoDigits + 'e.txt">E-text (5000-s2-'
-                + lastTwoDigits + 'e.txt)</a>';
-        }
-    </script>
+        // Create the e-text link with the last 2 digits 
+        document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
+            + lastTwoDigits + 'e.txt">E-text (5000-s2-'
+            + lastTwoDigits + 'e.txt)</a>';
+    }
+</script>
 
     <!-- Write closure template -->
     <script>
