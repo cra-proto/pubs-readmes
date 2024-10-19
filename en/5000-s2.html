@@ -50,38 +50,38 @@
 </div>
 <!-- Write closure template --> 
 <script>
- var defTop = document.getElementById("def-top");
- defTop.outerHTML = wet.builder.top({
- lngLinks: [{
- lang: "fr",
- href: "#",
- text: "Français"
- }],
- customSearch: [{
- action: "www.canada.ca/en/revenue-agency/search.html",
- placeholder: "CRA",
- method: "get",
- }],
- signIn: [{
- href: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
- }],
- breadcrumbs: [{
- title: "Canada.ca",
- href: "https://www.canada.ca/en.html"
- }, {
- title: "Canada Revenue Agency (CRA)",
- href: "https://www.canada.ca/en/revenue-agency.html"
- }, {
- title: "Forms and publications - CRA",
- href: "https://www.canada.ca/en/revenue-agency/services/forms-publications.html"
- }, {
- title: "All personal income tax packages",
- href: "https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years.html"
- }, {
- title: "Get a T1 income tax package",
- href: "https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html"
- }]
- });
+     var defTop = document.getElementById("def-top");
+     defTop.outerHTML = wet.builder.top({
+     lngLinks: [{
+         lang: "fr",
+         href: "#",
+         text: "Français"
+     }],
+         customSearch: [{
+         action: "www.canada.ca/en/revenue-agency/search.html",
+         placeholder: "CRA",
+         method: "get",
+     }],
+         signIn: [{
+         href: "https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html"
+     }],
+         breadcrumbs: [{
+         title: "Canada.ca",
+         href: "https://www.canada.ca/en.html"
+     }, {
+         title: "Canada Revenue Agency (CRA)",
+         href: "https://www.canada.ca/en/revenue-agency.html"
+     }, {
+         title: "Forms and publications - CRA",
+         href: "https://www.canada.ca/en/revenue-agency/services/forms-publications.html"
+     }, {
+         title: "All personal income tax packages",
+         href: "https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years.html"
+     }, {
+         title: "Get a T1 income tax package",
+         href: "https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html"
+     }]
+     });
  </script> 
 
 <!-- Write closure template -->
@@ -148,13 +148,14 @@
         <li><span class="fas fa-pencil-alt text-muted fa-lg fa-li"></span>
           <h3>Print and fill out by hand</h3>
           <ul>
-            <li>Selected year: <span id="standard-pdf"></span></li>
+            <li><span id="standard-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
                 <summary>All years: Standard print PDFs</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
+                  <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.pdf">2023 - Standard print PDF (5000-s2-23e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-22e.pdf">2022 - Standard print PDF (5000-s2-22e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-21e.pdf">2021 - Standard print PDF (5000-s2-21e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-20e.pdf">2020 - Standard print PDF (5000-s2-20e.pdf)</a></li>
@@ -166,13 +167,14 @@
                 </ul>
               </details>
             </li>
-            <li>Selected year: <span id="large-pdf"></span></li>
+            <li><span id="large-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
                 <summary>All years: Large print PDFs</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
+                  <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-23e.pdf">2023 - Large print PDF (5000-s2-lp-23e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-22e.pdf">2022 - Large print PDF (5000-s2-lp-22e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-21e.pdf">2021 - Large print PDF (5000-s2-lp-21e.pdf)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-20e.pdf">2020 - Large print PDF (5000-s2-lp-20e.pdf)</a></li>
@@ -191,13 +193,14 @@
           <h3>Download and listen</h3>
           <p>Use your preferred screen reader to listen to the e-text file.</p>
           <ul>
-            <li>Selected year: <span id="e-text"></span></li>
+            <li><span id="e-text"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
                 <summary>All years: E-text</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul>
                   <!--From readme XML file-->
+                  <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.txt">2023 - E-text (5000-s2-23e.txt)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-22e.txt">2022 - E-text (5000-s2-22e.txt)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-21e.txt">2021 - E-text (5000-s2-21e.txt)</a></li>
                   <li><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-20e.txt">2020 - E-text (5000-s2-20e.txt)</a></li>
@@ -290,7 +293,10 @@
   + lastTwoDigits + 'e.txt">E-text (5000-s2-' + lastTwoDigits + 'e.txt)</a>';
  }
  else {
- document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf">2023 - Fillable PDF (5000-s2-fill-23e.pdf)</a>'
+ document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf">2023 - Fillable PDF (5000-s2-fill-23e.pdf)</a>';
+ document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.pdf">2023 - Standard print PDF (5000-s2-23e.pdf)</a>';
+ document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-23e.pdf">2023 - Large print PDF (5000-s2-lp-23e.pdf)</a>';
+ document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.txt">2023 - E-text (5000-s2-23e.txt)</a>';
  }
 </script> 
 
