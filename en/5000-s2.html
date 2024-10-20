@@ -267,16 +267,13 @@
  // Extract 'year' from the URL parameters
  const urlParams = new URLSearchParams(window.location.search);
  const year = urlParams.get('year');
- lastTwoDigits;
 
  // Insert 'year' into your HTML
  if (year) {
-     // Get the last two digits of the year
-     lastTwoDigits = year.slice(-2);
- } else {
-     // Get the last two digits of the year
-     lastTwoDigits = 23;
- }
+
+ // Get the last two digits of the year
+ const lastTwoDigits = year.slice(-2);
+
  // Create the fillable PDF link with the last 2 digits 
  document.getElementById('fillable-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-'
   + lastTwoDigits + 'e.pdf" download="5000-s2-fill-'
@@ -294,12 +291,12 @@
  // Create the e-text link with the last 2 digits 
  document.getElementById('e-text').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
   + lastTwoDigits + 'e.txt">E-text (5000-s2-' + lastTwoDigits + 'e.txt)</a>';
- //} else {
- //document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf">2023 - Fillable PDF (5000-s2-fill-23e.pdf)</a>';
- //document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.pdf">2023 - Standard print PDF (5000-s2-23e.pdf)</a>';
- //document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-23e.pdf">2023 - Large print PDF (5000-s2-lp-23e.pdf)</a>';
- //document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.txt">2023 - E-text (5000-s2-23e.txt)</a>';
- //}
+ } else {
+ document.getElementById('fillable-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-fill-23e.pdf">2023 - Fillable PDF (5000-s2-fill-23e.pdf)</a>';
+ document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.pdf">2023 - Standard print PDF (5000-s2-23e.pdf)</a>';
+ document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp-23e.pdf">2023 - Large print PDF (5000-s2-lp-23e.pdf)</a>';
+ document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-23e.txt">2023 - E-text (5000-s2-23e.txt)</a>';
+ }
 </script> 
 
 <!-- Write closure template --> 
