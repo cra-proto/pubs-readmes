@@ -179,12 +179,15 @@ const onlineLinks = {
  // Extract 'year' from the URL parameters
  const urlParams = new URLSearchParams(window.location.search);
  const year = urlParams.get('year');
- console.log("Year 1: ", year);
+ console.log("Year 1:", year);
 
  // Insert 'year' into your HTML
- if (year & onlineLinks [year]) {
-    console.log("Year 2: ", year);    
-    console.log("Year link 1:", (onlineLinks [year]));
+ if (year) {
+  console.log("Year 2:", year);
+
+      if (onlineLinks [year]) {
+        console.log("Year link 1:", (onlineLinks [year]));
+      }
 
  // Get the last two digits of the year
  const lastTwoDigits = year.slice(-2);
