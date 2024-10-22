@@ -181,33 +181,35 @@ const onlineLinks = {
  const year = urlParams.get('year');
  console.log("Year 1:", year);
 
- // Insert 'year' into your HTML
- if (year && onlineLinks [year]) {
-   console.log("Year link 1:", (onlineLinks [year]));
+   // Insert 'year' into your HTML
+   if (year && onlineLinks [year]) {
+     //console.log("Year link 1:", (onlineLinks [year]));
 
- // Get the last two digits of the year
- const lastTwoDigits = year.slice(-2);
+     // Get the last two digits of the year
+     const lastTwoDigits = year.slice(-2);
 
- // Create the fillable PDF link with the last 2 digits 
- document.getElementById('online-format').innerHTML = 'Selected year: ' + onlineLinks [year];
+     // Create the fillable PDF link with the last 2 digits 
+     document.getElementById('online-format').innerHTML = 'Selected year: ' + onlineLinks [year];
 
- // Create the standart PDF link with the last 2 digits 
- document.getElementById('standard-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
-  + lastTwoDigits + 'e.pdf">Standard PDF (5007-pc-' + lastTwoDigits + 'e.pdf)</a>';
+     // Create the standart PDF link with the last 2 digits 
+     document.getElementById('standard-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
+     + lastTwoDigits + 'e.pdf">Standard PDF (5007-pc-' + lastTwoDigits + 'e.pdf)</a>';
 
- // Create the large print PDF link with the last 2 digits 
- document.getElementById('large-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-lp-'
-  + lastTwoDigits + 'e.pdf">Large print PDF (5007-pc-lp-' + lastTwoDigits + 'e.pdf)</a>';
+     // Create the large print PDF link with the last 2 digits 
+     document.getElementById('large-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-lp-'
+     + lastTwoDigits + 'e.pdf">Large print PDF (5007-pc-lp-' + lastTwoDigits + 'e.pdf)</a>';
 
- // Create the e-text link with the last 2 digits 
- document.getElementById('e-text').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
-  + lastTwoDigits + 'e.txt">E-text (5007-pc-' + lastTwoDigits + 'e.txt)</a>';
- } else {
- document.getElementById('online-format').innerHTML = '<a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/manitoba/5007-pc.html"><span class="wb-inv">Accessible </span>2023 - Online format</a>';
- document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf">2023 - Standard print PDF (5007-pc-23e.pdf)</a>';
- document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-lp-23e.pdf">2023 - Large print PDF (5007-pc-lp-23e.pdf)</a>';
- document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.txt">2023 - E-text (5007-pc-23e.txt)</a>';
- }
+     // Create the e-text link with the last 2 digits 
+     document.getElementById('e-text').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
+     + lastTwoDigits + 'e.txt">E-text (5007-pc-' + lastTwoDigits + 'e.txt)</a>';
+     } 
+    
+   else {
+     document.getElementById('online-format').innerHTML = '<a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/manitoba/5007-pc.html"><span class="wb-inv">Accessible </span>2023 - Online format</a>';
+     document.getElementById('standard-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf">2023 - Standard print PDF (5007-pc-23e.pdf)</a>';
+     document.getElementById('large-pdf').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-lp-23e.pdf">2023 - Large print PDF (5007-pc-lp-23e.pdf)</a>';
+     document.getElementById('e-text').innerHTML = '<a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.txt">2023 - E-text (5007-pc-23e.txt)</a>';
+   }
 </script> 
 
 <!-- Write closure template --> 
