@@ -120,10 +120,10 @@
  class="far fa-question-circle mrgn-lft-sm"></span></span></a> in Acrobat Reader
             10 or higher.</p>
           <ul>
-            <li><span id="fillable-pdf"></span></li>
+            <li class="lst-none"><span id="fillable-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: <span class="wb-inv">Accessible</span> Fillable PDFs </summary>
+                <summary><span class="wb-inv">Accessible</span> Fillable PDF - all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul>
                   <!--From readme XML file-->
@@ -145,10 +145,10 @@
         <li><span class="fas fa-pencil-alt text-muted fa-lg fa-li"></span>
           <h3>Print and fill out by hand</h3>
           <ul>
-            <li><span id="standard-pdf"></span></li>
+            <li class="lst-none"><span id="standard-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: Standard print PDFs</summary>
+                <summary>Standard print PDF - all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
@@ -164,10 +164,13 @@
                 </ul>
               </details>
             </li>
-            <li><span id="large-pdf"></span></li>
+          </ul>
+          <h4 class="h5">Other formats</h4>
+          <ul>
+            <!--<li class="lst-none"><span id="large-pdf"></span></li>-->
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: Large print PDFs</summary>
+                <summary>Large print PDF - all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
@@ -184,16 +187,16 @@
             </li>
           </ul>
         </li>
-        <!--E-text-->
         
+        <!--E-text-->
         <li> <span class="fas fa-volume-up text-muted fa-lg fa-li"></span>
           <h3>Download and listen</h3>
           <p>Use your preferred screen reader to listen to the e-text file.</p>
           <ul>
-            <li><span id="e-text"></span></li>
+            <!--<li class="lst-none"><span id="e-text"></span></li>-->
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: E-text</summary>
+                <summary>E-text - all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul>
                   <!--From readme XML file-->
@@ -282,7 +285,7 @@
 
  // Create the standart PDF link with the last 2 digits 
  document.getElementById('standard-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-'
-  + lastTwoDigits + 'e.pdf">' + year + ' - Standard PDF (5000-s2-' + lastTwoDigits + 'e.pdf)</a>';
+  + lastTwoDigits + 'e.pdf">' + year + ' - Standard print PDF (5000-s2-' + lastTwoDigits + 'e.pdf)</a>';
 
  // Create the large print PDF link with the last 2 digits 
  document.getElementById('large-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pbg/5000-s2/5000-s2-lp'
