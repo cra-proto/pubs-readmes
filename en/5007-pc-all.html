@@ -102,7 +102,7 @@
             <li><span id="online-format"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: online formats</summary>
+                <summary>Online format &ndash; all available years</summary>
                 <p>This publication is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
@@ -139,7 +139,7 @@
             <li><span id="standard-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: Standard print PDFs</summary>
+                <summary>Standard print PDF &ndash; all available years</summary>
                 <p>This publication is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
@@ -158,7 +158,7 @@
             <li><span id="large-pdf"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: Large print PDFs</summary>
+                <summary>Large print PDF &ndash; all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul class="lst-none">
                   <!--From readme XML file-->
@@ -182,7 +182,7 @@
             <li><span id="e-text"></span></li>
             <li class="lst-none">
               <details class="max-content mrgn-tp-md mrgn-lft-md">
-                <summary>All years: E-text</summary>
+                <summary>E-text &ndash; all available years</summary>
                 <p>This form is also available for the years listed below:</p>
                 <ul>
                   <!--From readme XML file-->
@@ -293,15 +293,15 @@
   
        // Create the standart PDF link with the last 2 digits 
        document.getElementById('standard-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
-       + lastTwoDigits + 'e.pdf">Standard PDF (5007-pc-' + lastTwoDigits + 'e.pdf)</a>';
+  + lastTwoDigits + 'e.pdf">' + year + ' -  Standard print PDF (5007-pc-' + lastTwoDigits + 'e.pdf)</a>';
   
        // Create the large print PDF link with the last 2 digits 
        document.getElementById('large-pdf').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-lp-'
-       + lastTwoDigits + 'e.pdf">Large print PDF (5007-pc-lp-' + lastTwoDigits + 'e.pdf)</a>';
+  + lastTwoDigits + 'e.pdf">' + year + ' - Large print PDF (5007-pc-lp-' + lastTwoDigits + 'e.pdf)</a>';
   
        // Create the e-text link with the last 2 digits 
        document.getElementById('e-text').innerHTML = 'Selected year: <a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-'
-       + lastTwoDigits + 'e.txt">E-text (5007-pc-' + lastTwoDigits + 'e.txt)</a>';
+  + lastTwoDigits + 'e.txt">' + year + ' -  E-text (5007-pc-' + lastTwoDigits + 'e.txt)</a>';
        } 
       
      else {
