@@ -6,14 +6,14 @@
 <title>URL Mapping - Patching JSON - Canada.ca</title>
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta name="description" content="Execute pre-configured patches action based on url query string." />
-<meta name="author" content=" " />
-<meta name="dcterms.title" content="URL Mapping - Patching JSON" />
-<meta name="dcterms.description" content="Execute pre-configured patches action based on url query string." />
-<meta name="dcterms.creator" content=" " />
-<meta name="dcterms.language" content="eng" />
-<meta name="dcterms.subject" content="" />
-<meta name="dcterms.issued" content="" />
-<meta name="dcterms.modified" content="2022-08-25" />
+<meta name="author" content=" "/>
+<meta name="dcterms.title" content="URL Mapping - Patching JSON"/>
+<meta name="dcterms.description" content="Execute pre-configured patches action based on url query string."/>
+<meta name="dcterms.creator" content=" "/>
+<meta name="dcterms.language" content="eng"/>
+<meta name="dcterms.subject" content=""/>
+<meta name="dcterms.issued" content=""/>
+<meta name="dcterms.modified" content="2022-08-25"/>
 <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" />
 <link rel="stylesheet" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" />
 <noscript>
@@ -21,7 +21,6 @@
 </noscript>
 <link rel="stylesheet" href="https://www.canada.ca/etc/designs/canada/wet-boew/méli-mélo/2024-09-kejimkujik.min.css"/>
 </head>
-
 <body vocab="http://schema.org/" typeof="WebPage">
 <nav>
   <ul id="wb-tphp">
@@ -102,14 +101,65 @@
 </header>
 <main class="container" property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
   <h1 property="name" id="wb-cont">URL Mapping - Patching JSON</h1>
-  
-  <!-- patch JSON code -->
-  
-  <div data-wb-urlmapping='{ "year" : { "action": "patch", "source": "#jmexample1", "base": "/year", "match": "^20[1-3][0-9]$", "default": "2023" } }'> </div>
-  <p id="jmexample1" data-wb-jsonmanager='{ "url": "year.json", "name": "example1", "wait": true }'>The year selected is: <span data-json-replace="#[example1]/year">...some year</span></p>
-  
-  <!-- patch JSON code -->
-  
+  <h2 id="ex1">Applying patches</h2>
+  <div data-wb-urlmapping='{
+		"2023": { "action": "patch", "source": "#online-format", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/5000-g.html\">2023 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+			]
+		},
+		"2022": { "action": "patch", "source": "#online-format", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2022/5000-g.html\">2022 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+			]
+		},
+		"2021": { "action": "patch", "source": "#online-format", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2021/5000-g.html\">2021 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+			]
+		},
+		"2020": { "action": "patch", "source": "#online-format", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2020/5000-g.html\">2020 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+			]
+		},
+		"multiplequery": false
+	}'></div>
+  <ul>
+    <li><a href="?2023">Select year <code>?2023</code></a></li>
+    <li><a href="?2022">Select year <code>?2022</code></a></li>
+    <li><a href="?2021">Select year <code>?2021</code></a></li>
+    <li><a href="?2020">Select year <code>?2020</code></a></li>
+  </ul>
+  <section class="well" id="online-format" data-wb-jsonmanager='{
+			"name": "online",
+			"wait": true
+		}'>
+    <h3 class="mrgn-tp-sm">Online format</h3>
+    <p>Selected year: <span data-json-replace="#[online]/url"><a href='https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/5000-g.html'>2023 - <span class='wb-inv'>Accessible </span>Online format</a></span></p>
+  </section>
+  <div data-wb-urlmapping='{
+		"2023": { "action": "patch", "source": "#standard-pdf", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf\">2023 - Standard print PDF (5007-pc-23e.pdf)</a>" }
+			]
+		},
+		"2022": { "action": "patch", "source": "#standard-pdf", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-22e.pdf\">2022 - Standard print PDF (5007-pc-22e.pdf)</a>" }
+			]
+		},
+		"2021": { "action": "patch", "source": "#standard-pdf", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-21e.pdf\">2021 - Standard print PDF (5007-pc-21e.pdf)</a>" }
+			]
+		},
+		"2020": { "action": "patch", "source": "#standard-pdf", "patches": [
+				{ "op": "add", "path": "/url", "value": "<a href=\"https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-20e.pdf\">2020 - Standard print PDF (5007-pc-20e.pdf)</a>" }
+			]
+		},
+		"multiplequery": false
+	}'></div>
+  <section class="well" id="standard-pdf" data-wb-jsonmanager='{
+			"name": "standard",
+			"wait": true
+		}'>
+    <h3 class="mrgn-tp-sm">Standard pdf</h3>
+    <p>Selected year: <span data-json-replace="#[standard]/url"><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf">2023 - Standard print PDF (5007-pc-23e.pdf)</a></span></p>
+  </section>
   <section class="pagedetails">
     <h2 class="wb-inv">Page details</h2>
     <dl id="wb-dtmd">
