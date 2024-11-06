@@ -140,48 +140,6 @@
     <p>My fruit is: <span data-json-replace="#[example1]/fruit">all of them</span></p>
   </section>
   <p>The <code>wait</code> configuration let the json-manager wait until it receives patches from another plugin before of updating data-json content.</p>
-  <details>
-    <summary>Source code</summary>
-    <pre><code>&lt;div data-wb-urlmapping='{
-		&quot;example1a&quot;: { &quot;action&quot;: &quot;patch&quot;, &quot;source&quot;: &quot;#jmexample1&quot;, &quot;patches&quot;: [
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/city&quot;, &quot;value&quot;: &quot;Gatineau&quot; },
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/fruit&quot;, &quot;value&quot;: &quot;Apple&quot; }
-			]
-		},
-		&quot;example1b&quot;: { &quot;action&quot;: &quot;patch&quot;, &quot;source&quot;: &quot;#jmexample1&quot;, &quot;patches&quot;: [
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/city&quot;, &quot;value&quot;: &quot;Ottawa&quot; },
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/fruit&quot;, &quot;value&quot;: &quot;Orange&quot; }
-			]
-		},
-		&quot;example1c&quot;: { &quot;action&quot;: &quot;patch&quot;, &quot;source&quot;: &quot;#jmexample1&quot;, &quot;patches&quot;: [
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/city&quot;, &quot;value&quot;: &quot;Hull&quot; }
-			]
-		},
-		&quot;example1d&quot;: { &quot;action&quot;: &quot;patch&quot;, &quot;source&quot;: &quot;#jmexample1&quot;, &quot;patches&quot;: [
-				{ &quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/fruit&quot;, &quot;value&quot;: &quot;Kiwi&quot; }
-			]
-		},
-		&quot;multiplequery&quot;: true
-	}'&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-	&lt;li&gt;&lt;a href=&quot;?&quot;&gt;Empty &lt;code&gt;?&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;?example1a&quot;&gt;Gatineau and Apple &lt;code&gt;?example1a&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;?example1b&quot;&gt;Ottawa and Orange &lt;code&gt;?example1b&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;?example1c&amp;amp;example1d&quot;&gt;Hull and Kiwi &lt;code&gt;?example1c&amp;amp;example1d&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;section class=&quot;well&quot; id=&quot;jmexample1&quot; data-wb-jsonmanager='{
-			&quot;url&quot;: &quot;demo/empty.json&quot;,
-			&quot;name&quot;: &quot;example1&quot;,
-			&quot;wait&quot;: true
-		}'&gt;
-	&lt;h3 class=&quot;mrgn-tp-sm&quot;&gt;Results&lt;/h3&gt;
-	&lt;p&gt;My city is: &lt;span data-json-replace=&quot;#[example1]/city&quot;&gt;somewhere&lt;/span&gt;&lt;/p&gt;
-	&lt;p&gt;My fruit is: &lt;span data-json-replace=&quot;#[example1]/fruit&quot;&gt;all of them&lt;/span&gt;&lt;/p&gt;
-&lt;/section&gt;</code></pre>
-  </details>
- 
   <section class="pagedetails">
     <h2 class="wb-inv">Page details</h2>
     <dl id="wb-dtmd">
