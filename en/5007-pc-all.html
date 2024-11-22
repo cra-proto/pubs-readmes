@@ -76,7 +76,7 @@
          href: "https://www.canada.ca/en/revenue-agency/services/forms-publications.html"
      }, {
          title: "Get a T1 income tax package",
-         href: "https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html"
+         href: "general-income-tax-benefit-package.html"
      }]
      });
  </script> 
@@ -97,19 +97,19 @@
           <!--From readme XML file ? or manual? Not sure-->
           <div data-wb-urlmapping='{
 		"2023": { "action": "patch", "source": "#online-format", "patches": [
-				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/5000-g.html\">2023 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"5007-pc.html\"><mark>2023</mark> - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
 			]
 		},
 		"2022": { "action": "patch", "source": "#online-format", "patches": [
-				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2022/5000-g.html\">2022 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2022/manitoba/5007-pc.html\">2022 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
 			]
 		},
 		"2021": { "action": "patch", "source": "#online-format", "patches": [
-				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2021/5000-g.html\">2021 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2021/manitoba/5007-pc.html\">2021 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
 			]
 		},
 		"2020": { "action": "patch", "source": "#online-format", "patches": [
-				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2020/5000-g.html\">2020 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
+				{ "op": "add", "path": "/url", "value": "Selected year: <a href=\"https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2020/manitoba/5007-pc.html\">2020 - <span class=\"wb-inv\">Accessible </span>Online format</a>" }
 			]
 		},
         "2019": { "action": "patch", "source": "#online-format", "patches": [
@@ -211,7 +211,9 @@
 			"name": "online",
 			"wait": true
 		}'>
-              <p><span data-json-replace="#[online]/url"><a href='https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/5000-g.html'>2023 - <span class='wb-inv'>Accessible </span>Online format</a></span></p>
+              <p><span data-json-replace="#[online]/url"><a href='5007-pc.html'>
+                <mark>2023</mark>
+                - <span class='wb-inv'>Accessible </span>Online format</a></span></p>
             </li>
             <li>
               <details class="max-content mrgn-tp-md mrgn-lft-md">
@@ -219,7 +221,9 @@
                 <p>This publication is also available for the years listed below:</p>
                 <ul>
                   <!-- This section might have to be done manually for all T1 guides after the other sections are pulled from the XML. This is becasue the headings in the archive pages can/should be somewhat cleaned up and reflected here -->
-                  <li><a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package/manitoba/5007-pc.html">2023 - Manitoba Information Guide</a></li>
+                  <li><a href="5007-pc.html">
+                    <mark>2023</mark>
+                    - Manitoba Information Guide</a></li>
                   <li><a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2022/manitoba/5007-pc.html">2022 - Manitoba Information Guide</a></li>
                   <li><a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2021/manitoba/5007-pc.html">2021 - Manitoba Information Guide</a></li>
                   <li><a href="https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/archived-general-income-tax-benefit-package-2020/manitoba/5007-pc.html">2020 - Manitoba Information Guide</a></li>
@@ -365,7 +369,7 @@
 			"name": "standard",
 			"wait": true
 		}'>
-        <p><span data-json-replace="#[standard]/url"><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf">2023 - Standard print PDF (5007-pc-23e.pdf)</a></span></p>
+                <p><span data-json-replace="#[standard]/url"><a href="https://www.canada.ca/content/dam/cra-arc/formspubs/pub/5007-pc/5007-pc-23e.pdf">2023 - Standard print PDF (5007-pc-23e.pdf)</a></span></p>
               </section>
             </li>
             <li>
